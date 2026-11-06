@@ -200,6 +200,7 @@ $("modal").onclick=e=>{ if(e.target.id==="modal") $("modal").classList.remove("s
 
 addEventListener("resize",size);
 renderList(); size();
+if('serviceWorker' in navigator){ addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{})); }
 if(document.fonts) document.fonts.ready.then(draw);
 </script>
 </body>
